@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:39:48 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/10 18:54:32 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/12 14:45:32 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <wchar.h>
+# include "ft_printf.h"
 
 # define BUFF_SIZE 10
 
