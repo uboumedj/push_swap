@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_push_swap.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uboumedj <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 14:43:43 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/12 16:15:25 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/12 21:40:22 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,9 @@ void				pb(t_pile *a, t_pile *b);
 void				ra(t_pile *a);
 void				rb(t_pile *b);
 void				rr(t_pile *a, t_pile *b);
+
+void				rra(t_pile *a);
+void				rrb(t_pile *b);
+void				rrr(t_pile *a, t_pile *b);
 
 #endif
