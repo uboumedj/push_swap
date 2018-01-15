@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uboumedj <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 15:00:16 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/12 16:16:43 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/15 21:22:01 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_push_swap.h"
 
-static void		push(t_pile **a, t_pile **b)
+static void		push(t_stack **a, t_stack **b)
 {
-	t_pile *temp;
+	t_stack *temp;
 
 	if (*a)
 	{
@@ -25,12 +25,12 @@ static void		push(t_pile **a, t_pile **b)
 	}
 }
 
-void			pa(t_pile *a, t_pile *b)
+void			pa(t_stack *a, t_stack *b)
 {
 	push(&a, &b);
 }
 
-void			pb(t_pile *a, t_pile *b)
+void			pb(t_stack *a, t_stack *b)
 {
 	push(&b, &a);
 }

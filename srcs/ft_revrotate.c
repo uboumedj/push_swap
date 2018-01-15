@@ -6,21 +6,21 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 16:17:51 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/12 21:40:22 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/15 21:21:05 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_push_swap.h"
 
-static void		revrotate(t_pile *pile)
+static void		revrotate(t_stack *stack)
 {
-	t_list	*inc;
-	int		prev_c;
-	int		cur_c;
+	t_stack		*inc;
+	int				prev_c;
+	int				cur_c;
 
-	if (pile && pile->next)
+	if (stack && stack->next)
 	{
-		inc = pile;
+		inc = stack;
 		prev_c = inc->content;
 		while (inc->next)
 		{
@@ -29,21 +29,21 @@ static void		revrotate(t_pile *pile)
 			prev_c = cur_c;
 			inc = inc->next;
 		}
-		pile->content = prev_c;
+		stack->content = prev_c;
 	}
 }
 
-void					rra(t_pile *a)
+void					rra(t_stack *a)
 {
 	revrotate(a);
 }
 
-void					rrb(t_pile *b)
+void					rrb(t_stack *b)
 {
 	revrotate(b);
 }
 
-void					rrr(t_pile *a, t_pile *b)
+void					rrr(t_stack *a, t_stack *b)
 {
 	revrotate(a);
 	revrotate(b);

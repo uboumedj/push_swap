@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 14:43:43 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/12 21:40:22 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/15 21:21:08 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,43 @@
 
 # define FT_PUSH_SWAP_H
 
-#include "../libft/inc/libft.h"
+# include "../libft/inc/libft.h"
 
-typedef struct		s_pile
+typedef struct		s_stack
 {
 	int content;
-	t_pile *next;
-}					t_pile;
+	t_stack *next;
+}									t_stack;
 
-void				sa(t_pile *a);
-void				sb(t_pile *b);
-void				ss(t_pile *a, t_pile *b);
+/*
+** ----------------------Pile manipulation functions------------------------
+*/
 
-void				pa(t_pile *a, t_pile *b);
-void				pb(t_pile *a, t_pile *b);
+void				sa(t_stack *a);
+void				sb(t_stack *b);
+void				ss(t_stack *a, t_stack *b);
 
-void				ra(t_pile *a);
-void				rb(t_pile *b);
-void				rr(t_pile *a, t_pile *b);
+void				pa(t_stack *a, t_stack *b);
+void				pb(t_stack *a, t_stack *b);
 
-void				rra(t_pile *a);
-void				rrb(t_pile *b);
-void				rrr(t_pile *a, t_pile *b);
+void				ra(t_stack *a);
+void				rb(t_stack *b);
+void				rr(t_stack *a, t_stack *b);
+
+void				rra(t_stack *a);
+void				rrb(t_stack *b);
+void				rrr(t_stack *a, t_stack *b);
+
+/*
+** -----------------------------Push_swap-----------------------------------
+*/
+
+
+
+/*
+** ------------------------------Checker------------------------------------
+*/
+
+
 
 #endif
