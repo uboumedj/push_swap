@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 15:53:14 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/15 21:22:45 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/16 12:05:54 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void		rotate(t_stack *stack)
 {
 	t_stack		*temp;
-	int				first;
+	int			first;
 
 	if (stack)
 	{

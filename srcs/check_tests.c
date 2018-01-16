@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/15 23:30:45 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/16 02:24:56 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/16 12:02:33 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,12 @@ int			check_sort(t_stack *a)
 {
 	t_stack	*temp;
 
-  temp = a;
-  while (temp->next)
-  {
-    if (temp->content > temp->next->content)
-      return (0);
-    temp = temp->next;
-  }
-  return (1);
+	temp = a;
+	while (temp->next)
+	{
+		if (temp->content > temp->next->content)
+			return (0);
+		temp = temp->next;
+	}
+	return (1);
 }
