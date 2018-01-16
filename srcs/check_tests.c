@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/15 23:30:45 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/16 15:21:22 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/16 16:15:24 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,11 @@ int			check_sort(t_stack *a)
 	temp = a;
 	while (temp->next)
 	{
+		if (!(check_valid_nb(temp->content, temp->next)))
+		{
+			ft_printf("Error\n");
+			exit(1);
+		}
 		if (temp->content > temp->next->content)
 			return (0);
 		temp = temp->next;

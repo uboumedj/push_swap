@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stacknew.c                                      :+:      :+:    :+:   */
+/*   check_ops.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uboumedj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/16 14:08:12 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/16 15:44:26 by uboumedj         ###   ########.fr       */
+/*   Created: 2018/01/16 16:18:41 by uboumedj          #+#    #+#             */
+/*   Updated: 2018/01/16 16:27:38 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/libft.h"
+#include "../inc/ft_push_swap.h"
 
-t_stack	*ft_stacknew(int content)
+void	do_operations(char *line, t_stack **a, t_stack **b)
 {
-	t_stack *new;
+	while (get_next_line(0, &line) != 0)
+	{
 
-	if (!(new = (t_stack *)malloc(sizeof(t_stack))))
-		return (NULL);
-	if (!(new->content = (int)malloc(sizeof(int))))
-		return (NULL);
-	if (content != 0)
-		new->content = content;
-	new->next = NULL;
-	return (new);
+	}
 }

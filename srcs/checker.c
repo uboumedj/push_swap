@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/15 22:33:46 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/16 15:22:23 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/16 16:28:14 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int				get_numbers(t_stack **a, int argc, char **argv)
 	init_list(a, argc, argv);
 	i = 1;
 	t = *a;
-	while (i < argc && t != NULL)
+	while (i < argc)
 	{
 		temp = (long long int)ft_atoi(argv[i]);
 		if (!(check_valid_nb(temp, *a)))
@@ -31,8 +31,8 @@ int				get_numbers(t_stack **a, int argc, char **argv)
 		}
 		else
 		{
-			(*a)->content = temp;
-			*a = (*a)->next;
+			(*a)->content = (int)temp;
+			(*a) = (*a)->next;
 		}
 		i++;
 	}
@@ -80,7 +80,7 @@ int				main(int argc, char **argv)
 		line = NULL;
 		if (get_numbers(&a, argc, argv))
 		{
-			//do_operations(line, a, b);
+			do_operations(line, &a, &b);
 		}
 		else
 		{
