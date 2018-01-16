@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:39:48 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/12 14:45:32 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/16 14:42:48 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,12 @@ typedef struct	s_list
 	size_t			content_size;
 	struct s_list	*next;
 }				t_list;
+
+typedef struct	s_stack
+{
+	int				content;
+	struct s_stack	*next;
+}				t_stack;
 
 /*
 ** ---------------------------Display Functions---------------------------
@@ -142,6 +148,13 @@ int				ft_pow(int x, int y);
 int				ft_toneg(int *nb);
 int				ft_max(int a, int b);
 int				ft_min(int a, int b);
+
+/*
+** --------------------------------Stacks-------------------------------------
+*/
+
+t_stack			*ft_stacknew(int content);
+void 			ft_stackfree(t_stack **stack);
 
 /*
 ** ----------------------------File Manipulation-------------------------------

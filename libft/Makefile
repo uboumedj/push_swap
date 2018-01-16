@@ -6,7 +6,7 @@
 #    By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 14:14:53 by uboumedj          #+#    #+#              #
-#    Updated: 2018/01/10 19:09:22 by uboumedj         ###   ########.fr        #
+#    Updated: 2018/01/16 14:42:15 by uboumedj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 
 CCFLAGS = -Wall -Wextra -Werror
 
-HEADER = libft.h
+HEADER = libft.h ft_printf.h
 
 SRCDIR = srcs
 OBJDIR = obj
@@ -51,7 +51,8 @@ SRC = mem/ft_memset.c mem/ft_memcpy.c mem/ft_memccpy.c mem/ft_memmove.c \
 		  printf/ft_printf.c printf/ft_printf_bint.c printf/ft_printf_char.c \
 		  printf/ft_printf_hexint.c printf/ft_printf_int.c printf/ft_printf_oint.c \
 		  printf/ft_printf_ptr.c printf/ft_printf_str.c printf/ft_printf_uint.c \
-		  printf/ft_printflags.c printf/ft_setflags.c
+		  printf/ft_printflags.c printf/ft_setflags.c \
+		  stacks/ft_stacknew.c stacks/ft_stackfree.c
 
 #ALLOWED EXTENSIONS
 

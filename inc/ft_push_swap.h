@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 14:43:43 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/15 21:21:08 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/16 15:16:01 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,6 @@
 # define FT_PUSH_SWAP_H
 
 # include "../libft/inc/libft.h"
-
-typedef struct		s_stack
-{
-	int content;
-	t_stack *next;
-}									t_stack;
 
 /*
 ** ----------------------Pile manipulation functions------------------------
@@ -51,6 +45,10 @@ void				rrr(t_stack *a, t_stack *b);
 ** ------------------------------Checker------------------------------------
 */
 
-
+int					check_valid_nb(long long int nb, t_stack *a);
+int					check_valid_args(int argc, char **argv);
+int					check_sort(t_stack *a);
+int					get_numbers(t_stack **a, int argc, char **argv);
+void				init_list(t_stack **a, int argc, char **argv);
 
 #endif
