@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/15 22:33:46 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/17 17:12:25 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/18 17:12:34 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,18 +76,16 @@ int				main(int argc, char **argv)
 	if (argc > 1)
 	{
 		a = ft_stacknew(0);
-		b = ft_stacknew(0);
+		b = NULL;
 		line = NULL;
 		if (get_numbers(&a, argc, argv))
-		{
 			do_operations(line, &a, &b);
-		}
 		else
 		{
 			ft_printf("Error\n");
 			exit(1);
 		}
-		ft_printf((check_sort(a) ? "OK\n" : "KO\n");
+		ft_printf((check_sort(a) ? "OK\n" : "KO\n"));
 		//ft_stackfree(&a);
 		//ft_stackfree(&b);
 	}
