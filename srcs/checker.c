@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/15 22:33:46 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/16 16:28:14 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/17 17:12:25 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,10 +87,7 @@ int				main(int argc, char **argv)
 			ft_printf("Error\n");
 			exit(1);
 		}
-		if (check_sort(a))
-			ft_printf("OK\n");
-		else
-			ft_printf("KO\n");
+		ft_printf((check_sort(a) ? "OK\n" : "KO\n");
 		//ft_stackfree(&a);
 		//ft_stackfree(&b);
 	}
