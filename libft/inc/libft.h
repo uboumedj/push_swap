@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:39:48 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/16 14:42:48 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/22 16:09:52 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,7 @@ size_t			ft_unbrlenbase(unsigned long long int nb, unsigned int base);
 int				ft_strnlen(const char *str, int n);
 int				ft_wstrlen(const wchar_t *str);
 int				ft_wstrnlen(const wchar_t *str, int n);
+int				ft_strarraylen(char **array);
 
 /*
 ** ---------------------------CHAR Manipulation-----------------------------

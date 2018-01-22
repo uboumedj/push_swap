@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 14:43:43 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/18 16:56:04 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/22 16:02:17 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,15 @@ void				rrb(t_stack *b);
 void				rrr(t_stack *a, t_stack *b);
 
 /*
+** -------------------------Common functions--------------------------------
+*/
+
+void				get_numbers(t_stack **a, int argc, char **argv);
+void				init_list(t_stack **a, int argc, char **argv);
+int					check_valid_nb(long long int nb, t_stack *a);
+int					check_valid_args(int argc, char **argv);
+
+/*
 ** -----------------------------Push_swap-----------------------------------
 */
 
@@ -45,10 +54,7 @@ void				rrr(t_stack *a, t_stack *b);
 ** ------------------------------Checker------------------------------------
 */
 
-int					check_valid_nb(long long int nb, t_stack *a);
-int					check_valid_args(int argc, char **argv);
 int					check_sort(t_stack *a);
-int					get_numbers(t_stack **a, int argc, char **argv);
-void				init_list(t_stack **a, int argc, char **argv);
 void				do_operations(char *line, t_stack **a, t_stack **b);
+
 #endif
