@@ -6,7 +6,7 @@
 #    By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 14:14:53 by uboumedj          #+#    #+#              #
-#    Updated: 2018/01/22 16:10:15 by uboumedj         ###   ########.fr        #
+#    Updated: 2018/01/22 16:25:57 by uboumedj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,7 @@ SRC = mem/ft_memset.c mem/ft_memcpy.c mem/ft_memccpy.c mem/ft_memmove.c \
 		  printf/ft_printf_hexint.c printf/ft_printf_int.c printf/ft_printf_oint.c \
 		  printf/ft_printf_ptr.c printf/ft_printf_str.c printf/ft_printf_uint.c \
 		  printf/ft_printflags.c printf/ft_setflags.c \
-		  stacks/ft_stacknew.c stacks/ft_stackfree.c
+		  stacks/ft_stacknew.c stacks/ft_stackfree.c stacks/ft_stacklen.c
 
 #ALLOWED EXTENSIONS
 
