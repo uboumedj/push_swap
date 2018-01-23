@@ -6,7 +6,7 @@
 #    By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/22 16:31:48 by uboumedj          #+#    #+#              #
-#    Updated: 2018/01/23 10:44:49 by uboumedj         ###   ########.fr        #
+#    Updated: 2018/01/23 15:35:58 by uboumedj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,6 @@ clean:
 fclean: clean
 	@rm -rf $(NAME_PS) $(NAME_CH)
 	@make fclean -C $(LIBFT)
-	@echo "\033[1;34mpush_swap project\033[1;33m files deleted\t\033[1;31m✓\033[0m"
+	@echo "\033[1;34mpush_swap project\033[1;33m files deleted\t\t\033[1;31m✓\033[0m"
 
 re: fclean all
