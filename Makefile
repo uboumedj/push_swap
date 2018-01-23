@@ -6,7 +6,7 @@
 #    By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/22 16:31:48 by uboumedj          #+#    #+#              #
-#    Updated: 2018/01/22 16:44:37 by uboumedj         ###   ########.fr        #
+#    Updated: 2018/01/23 10:44:49 by uboumedj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,12 +19,11 @@ FLAGS = -Wall -Wextra -Werror
 
 LIBFT = libft
 
-CH_SRCS =	srcs/check_ops.c srcs/check_tests.c srcs/checker.c \
-					srcs/get_numbers.c \
-					srcs/ft_push.c srcs/ft_revrotate.c srcs/ft_rotate.c srcs/ft_swap.c
+CH_SRCS = srcs/check_ops.c srcs/check_tests.c srcs/checker.c srcs/get_numbers.c \
+		  srcs/ft_push.c srcs/ft_revrotate.c srcs/ft_rotate.c srcs/ft_swap.c
 
-PS_SRCS = srcs/push_swap.c srcs/solve.c \
-					srcs/ft_push.c srcs/ft_revrotate.c srcs/ft_rotate.c srcs/ft_swap.c
+PS_SRCS = srcs/push_swap.c srcs/solve.c srcs/get_numbers.c srcs/check_tests.c \
+		  srcs/ft_push.c srcs/ft_revrotate.c srcs/ft_rotate.c srcs/ft_swap.c
 
 INC = ft_push_swap.h
 
@@ -35,18 +34,15 @@ PS_OBJS = $(PS_SRCS:.c=.o)
 
 all: $(NAME_PS) $(NAME_CH)
 
-$(NAME_CH): $(CH_OBJS)
+$(NAME_CH):
 	@make -C $(LIBFT)
-	@cp libft/libft.a ./$(NAME)
+	@ $(CC) $(FLAGS) -o $(NAME_CH) -Iinclude $(LIBFT)/libft.a $(CH_SRCS)
 	@echo "\033[1;34mchecker\033[1;32m...compiled\t✓\033[0m"
 
-$(NAME_PS): $(PS_OBJS)
+$(NAME_PS):
 	@make -C $(LIBFT)
-	@cp libft/libft.a ./$(NAME)
+	@ $(CC) $(FLAGS) -o $(NAME_PS) -Iinclude $(LIBFT)/libft.a $(PS_SRCS)
 	@echo "\033[1;34mpush_swap\033[1;32m..compiled\t✓\033[0m"
-
-%.o: %.c
-	@$(CC) $(FLAGS) -Iinclude -o $@ -c $<
 
 clean:
 	@rm -rf $(CH_OBJS) $(PS_OBJS)
@@ -59,4 +55,3 @@ fclean: clean
 	@echo "\033[1;34mpush_swap project\033[1;33m files deleted\t\033[1;31m✓\033[0m"
 
 re: fclean all
-	@make re -C $(LIBFT)

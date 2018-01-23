@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/15 22:33:46 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/22 16:11:00 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/23 14:15:33 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,14 @@ int				main(int argc, char **argv)
 		b = NULL;
 		line = NULL;
 		if (argc == 2)
-		{
 			args = ft_strsplit(argv[1], ' ');
-			argc = ft_strarraylen(args);
-		}
 		else
-			args = argv;
-		get_numbers(&a, argc, args);
+			args = &argv[1];
+		get_numbers(&a, ft_strarraylen(args), args);
 		do_operations(line, &a, &b);
 		ft_printf((check_sort(a) ? "OK\n" : "KO\n"));
-		//ft_stackfree(&a);
-		//ft_stackfree(&b);
+		ft_stackfree(&a);
+		ft_stackfree(&b);
 	}
 	else
 		ft_printf("usage: ./checker -[options] numbers list (n1 n2...)\n");

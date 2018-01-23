@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:39:48 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/22 16:25:43 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/23 12:58:35 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,7 +154,7 @@ int				ft_min(int a, int b);
 ** --------------------------------Stacks-------------------------------------
 */
 
-t_stack		*ft_stacknew(int content);
+t_stack			*ft_stacknew(int content);
 void 			ft_stackfree(t_stack **stack);
 int				ft_stacklen(t_stack *stack);
 

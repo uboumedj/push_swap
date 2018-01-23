@@ -6,7 +6,7 @@
 /*   By: uboumedj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/16 14:27:11 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/16 14:38:08 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/23 13:26:17 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ void	ft_stackfree(t_stack **stack)
 		while (cur != NULL)
 		{
 			next = cur->next;
-			free(&(cur->content));
+			cur->content = 0;
 			free(cur);
 			cur = next;
 		}
-		stack = NULL;
+		*stack = NULL;
 	}
 }
