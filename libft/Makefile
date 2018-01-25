@@ -6,7 +6,7 @@
 #    By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 14:14:53 by uboumedj          #+#    #+#              #
-#    Updated: 2018/01/22 16:25:57 by uboumedj         ###   ########.fr        #
+#    Updated: 2018/01/25 17:13:14 by uboumedj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ INCDIR = inc
 
 SRC = mem/ft_memset.c mem/ft_memcpy.c mem/ft_memccpy.c mem/ft_memmove.c \
 		  mem/ft_memchr.c mem/ft_memcmp.c mem/ft_memalloc.c mem/ft_memdel.c \
-		  mem/ft_bzero.c \
+		  mem/ft_bzero.c mem/ft_strarrayfree.c\
 		  str/ft_strlen.c str/ft_strsplit.c str/ft_strctrim.c str/ft_strtrim.c \
 		  str/ft_strjoin_i.c str/ft_strdup.c str/ft_strcpy.c str/ft_strncpy.c \
 		  str/ft_strcat.c str/ft_strncat.c str/ft_strlcat.c str/ft_strchr.c \

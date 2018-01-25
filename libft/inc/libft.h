@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:39:48 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/23 12:58:35 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/25 17:12:56 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,6 +127,7 @@ int				ft_memcmp(const void *ptr1, const void *ptr2, size_t n);
 void			*ft_memccpy(void *dest, const void *src, int c, size_t len);
 void			*ft_memchr(const void *ptr, int value, size_t n);
 void			*ft_memmove(void *dest, const void *src, size_t n);
+void			ft_strarrayfree(char **strs);
 
 /*
 ** -----------------------------Lists Manipulation----------------------------
