@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 14:43:43 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/23 13:44:56 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/01/25 04:07:14 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,16 @@ void				init_list(t_stack **a, int argc, char **argv);
 int					check_valid_nb(long long int nb, t_stack *t, t_stack *a);
 int					check_valid_args(int argc, char **argv);
 void				display_stacks(t_stack *a, t_stack *b);
+int					min_val(t_stack *a);
 
 /*
 ** -----------------------------Push_swap-----------------------------------
 */
 
 void				solve(t_stack **a, t_stack **b);
+void				solve_three(t_stack **a);
+void				solve_small_len(t_stack **a, t_stack **b);
+void				solve_big_len(t_stack **a, t_stack **b);
 
 /*
 ** ------------------------------Checker------------------------------------
