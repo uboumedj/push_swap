@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/15 23:30:45 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/23 13:43:32 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/01 14:00:45 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int			check_valid_args(int argc, char **argv)
 	int i;
 	int j;
 
-	i = 1;
+	i = 0;
 	while (i < argc)
 	{
 		j = 0;

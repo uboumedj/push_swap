@@ -6,19 +6,24 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 16:04:10 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/28 12:41:48 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/01 15:55:59 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_push_swap.h"
 
-int 				*three_max(t_stack *a)
+int					*three_max(t_stack *a)
 {
-	int 		tab[3];
-	t_stack	*temp;
-	int 		i;
+	int			*tab;
+	t_stack		*temp;
+	int			i;
 
 	i = 0;
+	if (!(tab = (int *)malloc(sizeof(int) * 3)))
+	{
+		ft_printf("memory error !\n");
+		exit(1);
+	}
 	while (i < 3)
 	{
 		temp = a;
@@ -29,11 +34,11 @@ int 				*three_max(t_stack *a)
 				tab[i] = (temp->content > tab[i]) ? temp->content : tab[i];
 			else if (i == 1)
 				tab[i] = (temp->content > tab[i]
-										&& temp->content != tab[0]) ? temp->content : tab[i];
+						&& temp->content != tab[0]) ? temp->content : tab[i];
 			else if (i == 2)
 				tab[i] = (temp->content > tab[i] && (temp->content != tab[0]
-										&& temp->content != tab[1])) ? temp->content : tab[i];
-			temp = temp->next
+						&& temp->content != tab[1])) ? temp->content : tab[i];
+			temp = temp->next;
 		}
 		i++;
 	}
@@ -42,14 +47,14 @@ int 				*three_max(t_stack *a)
 
 void				solve_big_len(t_stack **a, t_stack **b)
 {
-	int 	len;
-	int 	maxthree[3];
+	int		len;
+	int		*maxthree;
 
 	len = ft_stacklen(*a);
 	maxthree = three_max(*a);
 	while (check_sort(*a) == 0 && len > 3)
 	{
-
+		ft_printf("ok\n");
 	}
 	if (len == 3)
 	{
@@ -60,4 +65,5 @@ void				solve_big_len(t_stack **a, t_stack **b)
 			ft_printf("pa\n");
 		}
 	}
+	free(maxthree);
 }

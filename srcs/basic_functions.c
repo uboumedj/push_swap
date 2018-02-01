@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/25 15:59:04 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/25 16:03:37 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/01 15:52:01 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int				min_val(t_stack *a)
 {
 	int			res;
-	t_stack *temp;
+	t_stack		*temp;
 
 	if (!a)
 	{
@@ -26,7 +26,7 @@ int				min_val(t_stack *a)
 	res = temp->content;
 	while (temp)
 	{
-		if (temp->content > res)
+		if (temp->content < res)
 			res = temp->content;
 		temp = temp->next;
 	}
@@ -37,7 +37,7 @@ int				min_index(t_stack *a)
 {
 	int			res;
 	int			min;
-	t_stack *temp;
+	t_stack		*temp;
 
 	if (!a)
 	{

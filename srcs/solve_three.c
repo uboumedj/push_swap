@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/25 03:03:18 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/25 16:05:05 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/01 15:57:03 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void		three_min_sec(t_stack **a)
 {
-	if (a->content > a->next->next->content)
+	if ((*a)->content > (*a)->next->next->content)
 	{
 		ra(a);
 		ft_printf("ra\n");
@@ -28,7 +28,7 @@ static void		three_min_sec(t_stack **a)
 
 static void		three_min_third(t_stack **a)
 {
-	if (a->content > a->next->content)
+	if ((*a)->content > (*a)->next->content)
 	{
 		sa(a);
 		rra(a);
@@ -37,13 +37,13 @@ static void		three_min_third(t_stack **a)
 	else
 	{
 		rra(a);
-		ft_printf("sa\nrra\n");
+		ft_printf("rra\n");
 	}
 }
 
-void					solve_three(t_stack **a)
+void			solve_three(t_stack **a)
 {
-	t_stack **temp;
+	t_stack		*temp;
 	int			min;
 
 	temp = *a;

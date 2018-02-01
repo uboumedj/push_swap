@@ -6,9 +6,11 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/22 16:18:09 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/27 16:04:19 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/01 15:51:04 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../inc/ft_push_swap.h"
 
 void	solve(t_stack **a, t_stack **b)
 {

@@ -6,13 +6,13 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 16:02:55 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/29 17:53:01 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/01 15:56:30 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_push_swap.h"
 
-static void	min_to_top(t_stack **a)
+static void			min_to_top(t_stack **a)
 {
 	int index;
 
