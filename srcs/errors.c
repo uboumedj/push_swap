@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   solve.c                                            :+:      :+:    :+:   */
+/*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: uboumedj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/22 16:18:09 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/13 18:04:14 by uboumedj         ###   ########.fr       */
+/*   Created: 2018/02/13 15:13:37 by uboumedj          #+#    #+#             */
+/*   Updated: 2018/02/13 15:16:53 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_push_swap.h"
 
-void	solve(t_stack **a, t_stack **b)
+void	mem_error()
 {
-	int		len;
+	ft_printf("memory error !\n");
+	exit(1);
+}
 
-	if (!(len = ft_stacklen(*a)))
-		cmn_error();
-	if (check_sort(*a) == 0)
-	{
-		if (len <= 3)
-			solve_three(a);
-		//else if (len < 8)
-			//solve_small_len(a, b);
-		else
-			solve_big_len(a, b);
-	}
+void	cmn_error()
+{
+	ft_printf("Error !\n");
+	exit(1);
 }

@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/25 15:59:04 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/01 15:52:01 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/13 16:35:33 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,7 @@ int				min_val(t_stack *a)
 	t_stack		*temp;
 
 	if (!a)
-	{
-		ft_printf("Error\n");
-		exit(1);
-	}
+		cmn_error();
 	temp = a;
 	res = temp->content;
 	while (temp)
@@ -40,10 +37,7 @@ int				min_index(t_stack *a)
 	t_stack		*temp;
 
 	if (!a)
-	{
-		ft_printf("Error\n");
-		exit(1);
-	}
+		cmn_error();
 	temp = a;
 	min = min_val(a);
 	res = 0;
@@ -55,4 +49,64 @@ int				min_index(t_stack *a)
 		temp = temp->next;
 	}
 	return (-1);
+}
+
+int				stack_len(t_stack *a)
+{
+	int			res;
+	t_stack		*temp;
+
+	if (!a)
+		cmn_error();
+	res = 0;
+	temp = a;
+	while (temp)
+	{
+		res++;
+		temp = temp->next;
+	}
+	return (res);
+}
+
+int				max_val(t_stack *a)
+{
+	int			res;
+	t_stack		*temp;
+
+	temp = a;
+	res = temp->content;
+	while (temp)
+	{
+		if (temp->content > res)
+			res = temp->content;
+		temp = temp->next;
+	}
+	return (res);
+}
+
+int				med_val(t_stack *a)
+{
+	int			res;
+	int			len;
+	int			t_res;
+	t_stack		*temp;
+
+	if (stack_len(a) < 4)
+		cmn_error();
+	len = (stack_len(a) / 2);
+	res = min_val(a);
+	while (len > 0)
+	{
+		temp = a;
+		t_res = max_val(a);
+		while (temp)
+		{
+			if (temp->content < t_res && temp->content > res)
+				t_res = temp->content;
+			temp = temp->next;
+		}
+		res = t_res;
+		len--;
+	}
+	return (res);
 }

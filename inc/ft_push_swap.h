@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 14:43:43 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/01 14:52:00 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/13 18:05:37 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,17 @@ void				display_stacks(t_stack *a, t_stack *b);
 */
 
 int					min_val(t_stack *a);
+int					max_val(t_stack *a);
+int					last_val(t_stack *b);
 int					min_index(t_stack *a);
+int					med_val(t_stack *a);
+int					stack_len(t_stack *a);
+int					*three_max(t_stack *a);
 void				solve(t_stack **a, t_stack **b);
 void				solve_three(t_stack **a);
 void				solve_small_len(t_stack **a, t_stack **b);
 void				solve_big_len(t_stack **a, t_stack **b);
+void				solve_helper(t_stack **a, t_stack **b);
 
 /*
 ** ------------------------------Checker------------------------------------
@@ -62,5 +68,12 @@ void				solve_big_len(t_stack **a, t_stack **b);
 
 int					check_sort(t_stack *a);
 void				do_operations(char *line, t_stack **a, t_stack **b);
+
+/*
+** --------------------------------Errors------------------------------------
+*/
+
+void				mem_error();
+void				cmn_error();
 
 #endif
