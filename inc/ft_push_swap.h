@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 14:43:43 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/13 18:05:37 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/17 15:31:59 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,17 @@
 # define FT_PUSH_SWAP_H
 
 # include "../libft/inc/libft.h"
+
+typedef struct	s_data
+{
+	int				min_index;
+	int 			place;
+	int				min_steps;
+	int 			ra;
+	int				rra;
+	int 			rb;
+	int				rrb;
+}				t_data;
 
 /*
 ** ----------------------Pile manipulation functions------------------------
@@ -61,6 +72,16 @@ void				solve_three(t_stack **a);
 void				solve_small_len(t_stack **a, t_stack **b);
 void				solve_big_len(t_stack **a, t_stack **b);
 void				solve_helper(t_stack **a, t_stack **b);
+void				rotations(t_stack **a, t_stack **b, t_data *data);
+int					steps(int index, t_stack *a, t_stack *b);
+int					min_steps(t_stack **a, t_stack **b);
+int					check_middle(t_stack *b, int elem);
+int					check_location(t_stack *b, int elem);
+int					find_place(t_stack *a, t_stack *b, int index);
+void				rotate(t_stack **a, t_stack **b, t_data *data);
+void				revrotate(t_stack **a, t_stack **b, t_data *data);
+int					max_index(t_stack *a);
+void				push_back_to_a(t_stack **a, t_stack **b);
 
 /*
 ** ------------------------------Checker------------------------------------

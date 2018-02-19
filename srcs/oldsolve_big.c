@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   solve_big.c                                        :+:      :+:    :+:   */
+/*   oldsolve_big.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 16:04:10 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/17 15:36:42 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/17 15:23:17 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,20 +42,53 @@ int					*three_max(t_stack *a)
 	return (tab);
 }
 
-void				push_back_to_a(t_stack **a, t_stack **b)
-{
-	while (*b)
-	{
-		pa(a, b);
-		ft_printf("pa\n");
-	}
-}
-
 void				solve_helper(t_stack **a, t_stack **b)
 {
-	int minstep_idx;
+	int		med;
 
-	minstep_idx = min_steps(a, b);
+	med = med_val(*a);
+	if ((*a)->content == min_val(*a))
+	{
+		pb(a, b);
+		ft_printf("pb\n");
+	}
+	if ((*a)->content <= med)
+	{
+		if (((*a)->content > (*b)->content && (*b)->content == max_val(*b))
+				|| (*a)->content < min_val(*b))
+		{
+			pb(a, b);
+			ft_printf("pb\n");
+		}
+		else
+		{
+			if ((*a)->content < (*b)->content)
+			{
+				while ((*a)->content < (*b)->content)
+				{
+					rb(b);
+					ft_printf("rb\n");
+				}
+				pb(a, b);
+				ft_printf("pb\n");
+			}
+			else
+			{
+				while ((*a)->content < last_val(*b))
+				{
+					rrb(b);
+					ft_printf("rrb\n");
+				}
+				pb(a, b);
+				ft_printf("pb\n");
+			}
+		}
+	}
+	else
+	{
+		ra(a);
+		ft_printf("ra\n");
+	}
 }
 
 void				solve_big_len(t_stack **a, t_stack **b)
@@ -65,7 +98,7 @@ void				solve_big_len(t_stack **a, t_stack **b)
 
 	len = ft_stacklen(*a);
 	maxthree = three_max(*a);
-	while (check_sort(*a) == 0 && stack_len(a) > 3)
+	while (check_sort(*a) == 0 && len > 3)
 	{
 		if ((*a)->content == maxthree[0] || (*a)->content == maxthree[1] ||
 				(*a)->content == maxthree[2])
@@ -73,11 +106,19 @@ void				solve_big_len(t_stack **a, t_stack **b)
 			ra(a);
 			ft_printf("ra\n");
 		}
-		else
-			solve_helper(a, b);
+		solve_helper(a, b);
 	}
 	if (len == 3)
 		solve_three(a);
-	push_back_to_a(a, b);
+	while (*b && (*b)->content != max_val(*b))
+	{
+		rb(b);
+		ft_printf("rb\n");
+	}
+	while (*b)
+	{
+		pa(a, b);
+		ft_printf("pa\n");
+	}
 	free(maxthree);
 }
