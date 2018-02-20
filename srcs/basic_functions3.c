@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/15 13:12:14 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/17 15:17:59 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/20 01:55:41 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int			find_place(t_stack *a, t_stack *b, int index)
 	temp = a;
 	while (i < index)
 	{
-		temp = temp->next:
+		temp = temp->next;
 		i++;
 	}
 	elem = temp->content;
@@ -50,7 +50,7 @@ int			check_location(t_stack *b, int elem)
 	i = 0;
 	min_dif = 2147483647;
 	temp = b;
-	if (check_middle(stack, elem))
+	if (check_middle(b, elem))
 	{
 		res = 0;
 		min_dif = ft_abs(temp->content - last_val(temp));
@@ -65,7 +65,7 @@ int			check_location(t_stack *b, int elem)
 				min_dif = ft_abs(temp->next->content - temp->content);
 		}
 		i++;
-		temp = temp->next
+		temp = temp->next;
 	}
 	return (res);
 }
@@ -121,7 +121,7 @@ int			steps(int index, t_stack *a, t_stack *b)
 	else if (index <= stack_len(a) / 2)
 		steps += index;
 	else
-		steps += stacklen(a) - index;
+		steps += stack_len(a) - index;
 	steps++;
 	b_middle = stack_len(b) / 2;
 	if (place <= b_middle)

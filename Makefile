@@ -6,7 +6,7 @@
 #    By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/22 16:31:48 by uboumedj          #+#    #+#              #
-#    Updated: 2018/02/15 13:12:50 by uboumedj         ###   ########.fr        #
+#    Updated: 2018/02/20 02:19:57 by uboumedj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ PS_SRCS = srcs/push_swap.c srcs/solve.c srcs/get_numbers.c srcs/check_tests.c \
 		  srcs/ft_push.c srcs/ft_revrotate.c srcs/ft_rotate.c srcs/ft_swap.c \
 		  srcs/solve_big.c srcs/solve_small.c srcs/solve_three.c \
 		  srcs/basic_functions.c srcs/errors.c srcs/basic_functions2.c \
-			srcs/basic_functions3.c
+			srcs/basic_functions3.c srcs/solve_big_rotate.c
 
 INC = ft_push_swap.h
 

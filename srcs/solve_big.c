@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 16:04:10 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/17 15:36:42 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/20 02:00:36 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void				solve_big_len(t_stack **a, t_stack **b)
 
 	len = ft_stacklen(*a);
 	maxthree = three_max(*a);
-	while (check_sort(*a) == 0 && stack_len(a) > 3)
+	while (check_sort(*a) == 0 && stack_len(*a) > 3)
 	{
 		if ((*a)->content == maxthree[0] || (*a)->content == maxthree[1] ||
 				(*a)->content == maxthree[2])

@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 14:43:43 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/17 15:31:59 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/20 01:57:48 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,8 @@ int					min_steps(t_stack **a, t_stack **b);
 int					check_middle(t_stack *b, int elem);
 int					check_location(t_stack *b, int elem);
 int					find_place(t_stack *a, t_stack *b, int index);
-void				rotate(t_stack **a, t_stack **b, t_data *data);
-void				revrotate(t_stack **a, t_stack **b, t_data *data);
+void				rot(t_stack **a, t_stack **b, t_data *data);
+void				revrot(t_stack **a, t_stack **b, t_data *data);
 int					max_index(t_stack *a);
 void				push_back_to_a(t_stack **a, t_stack **b);
 
