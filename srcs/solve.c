@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/22 16:18:09 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/13 18:04:14 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/27 15:50:13 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void	solve(t_stack **a, t_stack **b)
 	{
 		if (len <= 3)
 			solve_three(a);
-		//else if (len < 8)
-			//solve_small_len(a, b);
+		else if (len < 8)
+			solve_small_len(a, b);
 		else
 			solve_big_len(a, b);
 	}

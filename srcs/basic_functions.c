@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/25 15:59:04 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/17 15:04:48 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/27 16:19:19 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int				stack_len(t_stack *a)
 	t_stack		*temp;
 
 	if (!a)
-		cmn_error();
+		return (0);
 	res = 0;
 	temp = a;
 	while (temp)

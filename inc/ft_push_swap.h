@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 14:43:43 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/20 01:57:48 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/27 19:14:59 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,17 @@
 
 # include "../libft/inc/libft.h"
 
-typedef struct	s_data
+typedef struct		s_data
 {
+	int				*maxthree;
 	int				min_index;
-	int 			place;
+	int				place;
 	int				min_steps;
-	int 			ra;
+	int				ra;
 	int				rra;
-	int 			rb;
+	int				rb;
 	int				rrb;
-}				t_data;
+}					t_data;
 
 /*
 ** ----------------------Pile manipulation functions------------------------
@@ -71,13 +72,11 @@ void				solve(t_stack **a, t_stack **b);
 void				solve_three(t_stack **a);
 void				solve_small_len(t_stack **a, t_stack **b);
 void				solve_big_len(t_stack **a, t_stack **b);
-void				solve_helper(t_stack **a, t_stack **b);
 void				rotations(t_stack **a, t_stack **b, t_data *data);
-int					steps(int index, t_stack *a, t_stack *b);
-int					min_steps(t_stack **a, t_stack **b);
-int					check_middle(t_stack *b, int elem);
+int					steps(int index, t_stack *a, t_stack *b, t_data *data);
+void				min_steps(t_stack **a, t_stack **b, t_data *data);
 int					check_location(t_stack *b, int elem);
-int					find_place(t_stack *a, t_stack *b, int index);
+int					find_place(t_stack *a, t_stack *b, int index, t_data *data);
 void				rot(t_stack **a, t_stack **b, t_data *data);
 void				revrot(t_stack **a, t_stack **b, t_data *data);
 int					max_index(t_stack *a);

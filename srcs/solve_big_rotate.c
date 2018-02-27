@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/16 16:26:53 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/20 01:57:49 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/27 19:06:24 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 void	rotations(t_stack **a, t_stack **b, t_data *data)
 {
+	data->ra = 0;
+	data->rb = 0;
+	data->rra = 0;
+	data->rrb = 0;
 	if (data->min_index <= stack_len(*a) / 2)
 		data->ra = data->min_index;
 	else
@@ -30,20 +34,20 @@ void	rotations(t_stack **a, t_stack **b, t_data *data)
 
 void	rot(t_stack **a, t_stack **b, t_data *data)
 {
-	while (data->ra && data->rb)
+	while (data->ra > 0 && data->rb > 0)
 	{
 		rr(a, b);
 		ft_printf("rr\n");
 		(data->ra)--;
 		(data->rb)--;
 	}
-	while (data->ra)
+	while (data->ra > 0)
 	{
 		ra(a);
 		ft_printf("ra\n");
 		(data->ra)--;
 	}
-	while (data->rb)
+	while (data->rb > 0)
 	{
 		rb(b);
 		ft_printf("rb\n");
