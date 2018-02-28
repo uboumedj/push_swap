@@ -6,7 +6,7 @@
 /*   By: uboumedj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:42:09 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/10 15:09:52 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/28 17:21:13 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,11 @@ void	ft_putstr(char const *str)
 {
 	int i;
 
-	if (str != NULL)
+	i = 0;
+	if (str)
 	{
-		i = 0;
 		while (str[i])
-		{
-			ft_putchar(str[i]);
 			i++;
-		}
+		write(1, str, i);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/15 22:33:46 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/28 14:26:31 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/28 17:18:08 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,8 @@ int				main(int argc, char **argv)
 		ft_printf((check_sort(a) ? "OK\n" : "KO\n"));
 		ft_stackfree(&a);
 		ft_stackfree(&b);
-		//ft_strarrayfree(args);
 	}
 	else
 		ft_printf("usage: ./checker -[options] numbers list (n1 n2...)\n");
-	while (1);
 	return (0);
 }

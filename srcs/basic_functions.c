@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/25 15:59:04 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/27 16:19:19 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/28 17:03:41 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,33 +80,6 @@ int				max_val(t_stack *a)
 		if (temp->content > res)
 			res = temp->content;
 		temp = temp->next;
-	}
-	return (res);
-}
-
-int				med_val(t_stack *a)
-{
-	int			res;
-	int			len;
-	int			t_res;
-	t_stack		*temp;
-
-	if (stack_len(a) < 4)
-		cmn_error();
-	len = (stack_len(a) / 2);
-	res = min_val(a);
-	while (len > 0)
-	{
-		temp = a;
-		t_res = max_val(a);
-		while (temp)
-		{
-			if (temp->content < t_res && temp->content > res)
-				t_res = temp->content;
-			temp = temp->next;
-		}
-		res = t_res;
-		len--;
 	}
 	return (res);
 }

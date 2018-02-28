@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/22 16:18:09 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/28 14:00:01 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/28 17:23:04 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	solve(t_stack **a, t_stack **b)
 {
 	int		len;
 
-	if (!(len = ft_stacklen(*a)))
+	if (!(len = stack_len(*a)))
 		cmn_error();
 	if (check_sort(*a) == 0)
 	{

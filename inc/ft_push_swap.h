@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 14:43:43 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/28 14:23:14 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/28 17:04:40 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 
 typedef struct		s_data
 {
-	int				*maxthree;
 	int				min_index;
 	int				place;
 	int				min_steps;
@@ -65,7 +64,6 @@ int					min_val(t_stack *a);
 int					max_val(t_stack *a);
 int					last_val(t_stack *b);
 int					min_index(t_stack *a);
-int					med_val(t_stack *a);
 int					stack_len(t_stack *a);
 int					*three_max(t_stack *a);
 void				solve(t_stack **a, t_stack **b);
@@ -73,10 +71,10 @@ void				solve_three(t_stack **a);
 void				solve_small_len(t_stack **a, t_stack **b);
 void				solve_big_len(t_stack **a, t_stack **b);
 void				rotations(t_stack **a, t_stack **b, t_data *data);
-int					steps(int index, t_stack *a, t_stack *b, t_data *data);
+int					steps(int index, t_stack *a, t_stack *b);
 void				min_steps(t_stack **a, t_stack **b, t_data *data);
 int					check_location(t_stack *b, int elem);
-int					find_place(t_stack *a, t_stack *b, int index, t_data *data);
+int					find_place(t_stack *a, t_stack *b, int index);
 void				rot(t_stack **a, t_stack **b, t_data *data);
 void				revrot(t_stack **a, t_stack **b, t_data *data);
 int					max_index(t_stack *a);

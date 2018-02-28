@@ -6,13 +6,13 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/15 13:12:14 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/28 14:21:51 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/28 17:04:19 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_push_swap.h"
 
-int			find_place(t_stack *a, t_stack *b, int index, t_data *data)
+int			find_place(t_stack *a, t_stack *b, int index)
 {
 	int			i;
 	int			res;
@@ -24,9 +24,6 @@ int			find_place(t_stack *a, t_stack *b, int index, t_data *data)
 	while (i++ < index)
 		temp = temp->next;
 	elem = temp->content;
-	if (elem == data->maxthree[0] || elem == data->maxthree[1]
-			|| elem == data->maxthree[2])
-		return (2147483647);
 	i = 0;
 	res = -1;
 	if (stack_len(b) == 0)
@@ -68,7 +65,7 @@ void		min_steps(t_stack **a, t_stack **b, t_data *data)
 	data->min_index = 2147483647;
 	while (i < stack_len(*a))
 	{
-		step_num = steps(i, *a, *b, data);
+		step_num = steps(i, *a, *b);
 		if (step_num < data->min_steps)
 		{
 			data->min_steps = step_num;
@@ -76,11 +73,11 @@ void		min_steps(t_stack **a, t_stack **b, t_data *data)
 		}
 		i++;
 	}
-	data->place = find_place(*a, *b, data->min_index, data);
+	data->place = find_place(*a, *b, data->min_index);
 	rotations(a, b, data);
 }
 
-int			steps(int index, t_stack *a, t_stack *b, t_data *data)
+int			steps(int index, t_stack *a, t_stack *b)
 {
 	int		steps;
 	int		b_middle;
@@ -88,9 +85,7 @@ int			steps(int index, t_stack *a, t_stack *b, t_data *data)
 
 	steps = 0;
 	b_middle = 0;
-	place = find_place(a, b, index, data);
-	if (place == 2147483647)
-		return (2147483647);
+	place = find_place(a, b, index);
 	if (index > 0 && index <= stack_len(a) / 2)
 		steps += index;
 	else if (index != 0)

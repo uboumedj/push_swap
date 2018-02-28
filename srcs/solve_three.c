@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/25 03:03:18 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/28 14:01:16 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/28 17:24:26 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void			solve_three(t_stack **a)
 	{
 		temp = *a;
 		min = min_val(*a);
-		if (ft_stacklen(*a) == 2)
+		if (stack_len(*a) == 2)
 		{
 			sa(a);
 			ft_printf("sa\n");

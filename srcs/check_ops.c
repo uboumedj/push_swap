@@ -6,7 +6,7 @@
 /*   By: uboumedj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/16 16:18:41 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/27 19:17:31 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/28 17:18:26 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void	do_operations(char *line, t_stack **a, t_stack **b)
 			ft_printf("Error\n");
 			exit(1);
 		}
-		//display_stacks(*a, *b);
 		free(line);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/16 16:26:53 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/27 19:06:24 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/28 17:02:55 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	rotations(t_stack **a, t_stack **b, t_data *data)
 	rot(a, b, data);
 	revrot(a, b, data);
 	pb(a, b);
-	ft_printf("pb\n");
+	ft_putstr("pb\n");
 }
 
 void	rot(t_stack **a, t_stack **b, t_data *data)
@@ -37,43 +37,43 @@ void	rot(t_stack **a, t_stack **b, t_data *data)
 	while (data->ra > 0 && data->rb > 0)
 	{
 		rr(a, b);
-		ft_printf("rr\n");
+		ft_putstr("rr\n");
 		(data->ra)--;
 		(data->rb)--;
 	}
 	while (data->ra > 0)
 	{
 		ra(a);
-		ft_printf("ra\n");
+		ft_putstr("ra\n");
 		(data->ra)--;
 	}
 	while (data->rb > 0)
 	{
 		rb(b);
-		ft_printf("rb\n");
+		ft_putstr("rb\n");
 		(data->rb)--;
 	}
 }
 
 void	revrot(t_stack **a, t_stack **b, t_data *data)
 {
-	while (data->rra && data->rrb)
+	while (data->rra > 0 && data->rrb > 0)
 	{
 		rrr(a, b);
-		ft_printf("rrr\n");
+		ft_putstr("rrr\n");
 		(data->rra)--;
 		(data->rrb)--;
 	}
-	while (data->rra)
+	while (data->rra > 0)
 	{
 		rra(a);
-		ft_printf("rra\n");
+		ft_putstr("rra\n");
 		(data->rra)--;
 	}
-	while (data->rrb)
+	while (data->rrb > 0)
 	{
 		rrb(b);
-		ft_printf("rrb\n");
+		ft_putstr("rrb\n");
 		(data->rrb)--;
 	}
 }
