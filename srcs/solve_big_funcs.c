@@ -6,12 +6,11 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/15 13:12:14 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/27 19:16:41 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/28 14:21:51 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_push_swap.h"
-#include <stdio.h>
 
 int			find_place(t_stack *a, t_stack *b, int index, t_data *data)
 {

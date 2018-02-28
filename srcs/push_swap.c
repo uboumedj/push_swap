@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/18 17:20:47 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/20 02:02:24 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/02/28 14:26:15 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ int		main(int argc, char **argv)
 	}
 	else
 		ft_printf("usage: ./push_swap -[options] numbers list (n1 n2...)\n");
+	while (1);
 	return (0);
 }
