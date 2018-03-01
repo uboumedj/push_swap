@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/22 15:54:54 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/20 02:19:00 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/03/01 16:30:07 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void			get_numbers(t_stack **a, int argc, char **argv)
 	t = *a;
 	while (i < argc)
 	{
-		temp = (long long int)ft_atoi(argv[i]);
+		temp = ft_atoll(argv[i]);
 		if (!(check_valid_nb(temp, t, *a)))
 			cmn_error();
 		else
@@ -33,6 +33,7 @@ void			get_numbers(t_stack **a, int argc, char **argv)
 		}
 		i++;
 	}
+	i--;
 	*a = t;
 }
 
@@ -49,10 +50,16 @@ void			init_list(t_stack **a, int argc, char **argv)
 	while (i < argc)
 	{
 		if (!(new = (t_stack *)malloc(sizeof(t_stack))))
-			mem_error();
+			cmn_error();
 		new->next = temp;
 		temp = new;
 		i++;
 	}
 	*a = temp;
+}
+
+void			cmn_error(void)
+{
+	write(2, "Error\n", 6);
+	exit(1);
 }

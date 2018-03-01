@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/15 13:12:14 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/28 17:04:19 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/03/01 19:18:44 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int			check_location(t_stack *b, int elem)
 	return (res);
 }
 
-void		min_steps(t_stack **a, t_stack **b, t_data *data)
+void		min_steps(t_stack **a, t_stack **b, t_data *data, t_flags **flags)
 {
 	int			i;
 	int			step_num;
@@ -74,7 +74,7 @@ void		min_steps(t_stack **a, t_stack **b, t_data *data)
 		i++;
 	}
 	data->place = find_place(*a, *b, data->min_index);
-	rotations(a, b, data);
+	rotations(a, b, data, flags);
 }
 
 int			steps(int index, t_stack *a, t_stack *b)

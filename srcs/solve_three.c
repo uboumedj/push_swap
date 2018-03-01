@@ -6,42 +6,42 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/25 03:03:18 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/28 17:24:26 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/03/01 19:53:27 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_push_swap.h"
 
-static void		three_min_sec(t_stack **a)
+static void		three_min_sec(t_stack **a, t_stack **b, t_flags **flags)
 {
 	if ((*a)->content > (*a)->next->next->content)
 	{
-		ra(a);
+		ra(a, b, flags);
 		ft_printf("ra\n");
 	}
 	else
 	{
-		sa(a);
+		sa(a, b, flags);
 		ft_printf("sa\n");
 	}
 }
 
-static void		three_min_third(t_stack **a)
+static void		three_min_third(t_stack **a, t_stack **b, t_flags **flags)
 {
 	if ((*a)->content > (*a)->next->content)
 	{
-		sa(a);
-		rra(a);
+		sa(a, b, flags);
+		rra(a, b, flags);
 		ft_printf("sa\nrra\n");
 	}
 	else
 	{
-		rra(a);
+		rra(a, b, flags);
 		ft_printf("rra\n");
 	}
 }
 
-void			solve_three(t_stack **a)
+void			solve_three(t_stack **a, t_stack **b, t_flags **flags)
 {
 	t_stack		*temp;
 	int			min;
@@ -52,18 +52,18 @@ void			solve_three(t_stack **a)
 		min = min_val(*a);
 		if (stack_len(*a) == 2)
 		{
-			sa(a);
+			sa(a, b, flags);
 			ft_printf("sa\n");
 		}
 		else if (temp->content == min)
 		{
-			rra(a);
-			sa(a);
+			rra(a, b, flags);
+			sa(a, b, flags);
 			ft_printf("rra\nsa\n");
 		}
 		else if (temp->next->content == min)
-			three_min_sec(a);
+			three_min_sec(a, b, flags);
 		else if (temp->next->next->content == min)
-			three_min_third(a);
+			three_min_third(a, b, flags);
 	}
 }

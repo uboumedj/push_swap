@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:39:48 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/02/28 17:21:35 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/03/01 14:35:19 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ void			ft_putlenwstr(wchar_t *str, int len);
 */
 
 int				ft_atoi(const char *str);
+long long int	ft_atoll(const char *str);
 int				ft_strtonum(char **str, int *res);
 char			*ft_itoa(int n);
 char			*ft_strrev(char *str);

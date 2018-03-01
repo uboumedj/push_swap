@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 15:35:36 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/23 11:36:36 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/03/01 19:36:56 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,30 @@ static void		swap(t_stack **stack)
 	}
 }
 
-void			sa(t_stack **a)
+void			sa(t_stack **a, t_stack **b, t_flags **flags)
 {
 	swap(a);
+	if ((*flags)->v)
+		display_stacks(*a, *b);
+	if ((*flags)->count)
+		((*flags)->nb)++;
 }
 
-void			sb(t_stack **b)
+void			sb(t_stack **a, t_stack **b, t_flags **flags)
 {
 	swap(b);
+	if ((*flags)->v)
+		display_stacks(*a, *b);
+	if ((*flags)->count)
+		((*flags)->nb)++;
 }
 
-void			ss(t_stack **a, t_stack **b)
+void			ss(t_stack **a, t_stack **b, t_flags **flags)
 {
 	swap(a);
 	swap(b);
+	if ((*flags)->v)
+		display_stacks(*a, *b);
+	if ((*flags)->count)
+		((*flags)->nb)++;
 }

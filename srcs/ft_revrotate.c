@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 16:17:51 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/01/23 11:49:34 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/03/01 19:36:30 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,30 @@ static void		revrotate(t_stack **stack)
 	}
 }
 
-void			rra(t_stack **a)
+void			rra(t_stack **a, t_stack **b, t_flags **flags)
 {
 	revrotate(a);
+	if ((*flags)->v)
+		display_stacks(*a, *b);
+	if ((*flags)->count)
+		((*flags)->nb)++;
 }
 
-void			rrb(t_stack **b)
+void			rrb(t_stack **a, t_stack **b, t_flags **flags)
 {
 	revrotate(b);
+	if ((*flags)->v)
+		display_stacks(*a, *b);
+	if ((*flags)->count)
+		((*flags)->nb)++;
 }
 
-void			rrr(t_stack **a, t_stack **b)
+void			rrr(t_stack **a, t_stack **b, t_flags **flags)
 {
 	revrotate(a);
 	revrotate(b);
+	if ((*flags)->v)
+		display_stacks(*a, *b);
+	if ((*flags)->count)
+		((*flags)->nb)++;
 }
