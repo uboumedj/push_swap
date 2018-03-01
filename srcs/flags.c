@@ -6,7 +6,7 @@
 /*   By: uboumedj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 16:45:22 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/03/01 20:02:50 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/03/01 20:20:43 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		check_for_flags(char *str, t_flags **flags)
 {
 	if (!(*flags))
 	{
-		if (!((*flags) = (t_flags *)malloc(2)))
+		if (!((*flags) = (t_flags *)malloc(sizeof(t_flags))))
 			cmn_error();
 		(*flags)->count = 0;
 		(*flags)->v = 0;
