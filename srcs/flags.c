@@ -6,7 +6,7 @@
 /*   By: uboumedj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 16:45:22 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/03/02 17:16:56 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/03/02 17:50:30 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,23 @@ int		check_for_flags(char **str, t_flags **flags)
 			cmn_error();
 		(*flags)->count = 0;
 		(*flags)->v = 0;
-		if (ft_strcmp(str[1], "-t") == 0 || ft_strcmp(str[2], "-t") == 0)
+		if (ft_strcmp(str[1], "-t") == 0)
 		{
 			(*flags)->count = 1;
 			(*flags)->nb = 0;
 		}
-		if (ft_strcmp(str[1], "-v") == 0 || ft_strcmp(str[2], "-v") == 0)
+		if (ft_strcmp(str[1], "-v") == 0)
 			(*flags)->v = 1;
+		if (str[2])
+		{
+			if (ft_strcmp(str[2], "-t") == 0 && (*flags)->count == 0)
+			{
+				(*flags)->count = 1;
+				(*flags)->nb = 0;
+			}
+			if (ft_strcmp(str[2], "-v") == 0 && (*flags)->v == 0)
+				(*flags)->v = 1;
+		}
 	}
 	return ((*flags)->v + (*flags)->count);
 }
