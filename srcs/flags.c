@@ -6,13 +6,13 @@
 /*   By: uboumedj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 16:45:22 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/03/01 20:20:43 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/03/02 17:16:56 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_push_swap.h"
 
-int		check_for_flags(char *str, t_flags **flags)
+int		check_for_flags(char **str, t_flags **flags)
 {
 	if (!(*flags))
 	{
@@ -20,12 +20,12 @@ int		check_for_flags(char *str, t_flags **flags)
 			cmn_error();
 		(*flags)->count = 0;
 		(*flags)->v = 0;
-		if (ft_strcmp(str, "-t") == 0)
+		if (ft_strcmp(str[1], "-t") == 0 || ft_strcmp(str[2], "-t") == 0)
 		{
 			(*flags)->count = 1;
 			(*flags)->nb = 0;
 		}
-		else if (ft_strcmp(str, "-v") == 0)
+		if (ft_strcmp(str[1], "-v") == 0 || ft_strcmp(str[2], "-v") == 0)
 			(*flags)->v = 1;
 	}
 	return ((*flags)->v + (*flags)->count);
@@ -35,7 +35,7 @@ void	do_flags(t_stack *a, t_stack *b, t_flags **flags)
 {
 	if ((*flags)->v)
 		display_stacks(a, b);
-	else if ((*flags)->count)
+	if ((*flags)->count)
 		(*flags)->nb++;
 }
 

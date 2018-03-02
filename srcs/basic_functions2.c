@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/25 15:59:04 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/03/02 15:14:43 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/03/02 17:10:25 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ int				max_index(t_stack *a)
 	int			max;
 	t_stack		*temp;
 
-	if (!a)
-		cmn_error();
 	temp = a;
 	max = max_val(a);
 	res = 0;
@@ -41,17 +39,4 @@ int				max_index(t_stack *a)
 		temp = temp->next;
 	}
 	return (-1);
-}
-
-void			strsplitfree(char **str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-	{
-		free(str[i]);
-		i++;
-	}
-	free(str);
 }

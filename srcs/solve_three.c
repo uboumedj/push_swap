@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/25 03:03:18 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/03/01 19:53:27 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/03/02 17:15:21 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ static void		three_min_sec(t_stack **a, t_stack **b, t_flags **flags)
 	if ((*a)->content > (*a)->next->next->content)
 	{
 		ra(a, b, flags);
-		ft_printf("ra\n");
+		ft_putstr("ra\n");
 	}
 	else
 	{
 		sa(a, b, flags);
-		ft_printf("sa\n");
+		ft_putstr("sa\n");
 	}
 }
 
@@ -31,13 +31,14 @@ static void		three_min_third(t_stack **a, t_stack **b, t_flags **flags)
 	if ((*a)->content > (*a)->next->content)
 	{
 		sa(a, b, flags);
+		ft_putstr("sa\n");
 		rra(a, b, flags);
-		ft_printf("sa\nrra\n");
+		ft_putstr("rra\n");
 	}
 	else
 	{
 		rra(a, b, flags);
-		ft_printf("rra\n");
+		ft_putstr("rra\n");
 	}
 }
 
@@ -53,13 +54,14 @@ void			solve_three(t_stack **a, t_stack **b, t_flags **flags)
 		if (stack_len(*a) == 2)
 		{
 			sa(a, b, flags);
-			ft_printf("sa\n");
+			ft_putstr("sa\n");
 		}
 		else if (temp->content == min)
 		{
 			rra(a, b, flags);
+			ft_putstr("rra\n");
 			sa(a, b, flags);
-			ft_printf("rra\nsa\n");
+			ft_putstr("sa\n");
 		}
 		else if (temp->next->content == min)
 			three_min_sec(a, b, flags);

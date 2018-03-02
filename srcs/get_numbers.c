@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/22 15:54:54 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/03/02 16:32:05 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/03/02 17:12:33 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void			init_list(t_stack **a, int argc, char **argv)
 	int			i;
 
 	if (!(check_valid_args(argc, argv)))
-		cmn_error();
+		mult_error(a, argv);
 	i = 1;
 	temp = *a;
 	while (i < argc)

@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/15 22:33:46 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/03/02 15:21:15 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/03/02 17:17:20 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ int				main(int argc, char **argv)
 		a = ft_stacknew(0);
 		b = NULL;
 		line = NULL;
-		if (argc == 2 + check_for_flags(argv[1], &flags))
-			args = ft_strsplit(argv[1 + check_for_flags(argv[1], &flags)], ' ');
+		if (argc == 2 + check_for_flags(argv, &flags))
+			args = ft_strsplit(argv[1 + check_for_flags(argv, &flags)], ' ');
 		else
-			args = ft_strarrdup(&argv[1 + check_for_flags(argv[1], &flags)]);
+			args = ft_strarrdup(&argv[1 + check_for_flags(argv, &flags)]);
 		get_numbers(&a, ft_strarraylen(args), args);
 		do_operations(line, &a, &b, &flags);
 		ft_printf((check_sort(a) ? "OK\n" : "KO\n"));
