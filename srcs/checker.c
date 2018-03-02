@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/15 22:33:46 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/03/02 17:52:33 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/03/02 18:05:17 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int				main(int argc, char **argv)
 			args = ft_strarrdup(&argv[1 + check_for_flags(argv, &flags)]);
 		get_numbers(&a, ft_strarraylen(args), args);
 		do_operations(line, &a, &b, &flags);
-		ft_printf((check_sort(a) ? "OK\n" : "KO\n"));
+		ft_printf(((check_sort(a) && !b) ? "OK\n" : "KO\n"));
 		freedom(a, b, flags, args);
 	}
 	else
