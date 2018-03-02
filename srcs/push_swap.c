@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/18 17:20:47 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/03/01 20:27:05 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/03/02 15:21:01 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,11 @@ int		main(int argc, char **argv)
 		if (argc == 2 + check_for_flags(argv[1], &flags))
 			args = ft_strsplit(argv[1 + check_for_flags(argv[1], &flags)], ' ');
 		else
-			args = &argv[1 + check_for_flags(argv[1], &flags)];
+			args = ft_strarrdup(&argv[1 + check_for_flags(argv[1], &flags)]);
 		argc = ft_strarraylen(args);
 		get_numbers(&a, argc, args);
 		solve(&a, &b, &flags);
-		ft_stackfree(&a);
-		ft_stackfree(&b);
-		free(flags);
+		freedom(a, b, flags, args);
 	}
 	else
 		ft_printf("usage: ./push_swap -[options] numbers list (n1 n2...)\n");

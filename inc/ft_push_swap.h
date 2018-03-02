@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 14:43:43 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/03/01 19:48:34 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/03/02 15:12:56 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void				strsplitfree(char **str);
 int					check_for_flags(char *str, t_flags **flags);
 void				do_flags(t_stack *a, t_stack *b, t_flags **flags);
 void				do_count(t_flags *flags);
+void				freedom(t_stack *a, t_stack *b, t_flags *flags, char **args);
 
 /*
 ** -----------------------------Push_swap-----------------------------------

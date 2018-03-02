@@ -6,7 +6,7 @@
 #    By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 14:14:53 by uboumedj          #+#    #+#              #
-#    Updated: 2018/03/01 14:35:39 by uboumedj         ###   ########.fr        #
+#    Updated: 2018/03/02 14:51:46 by uboumedj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SRC = mem/ft_memset.c mem/ft_memcpy.c mem/ft_memccpy.c mem/ft_memmove.c \
 		  str/ft_strmapi.c str/ft_strequ.c str/ft_strnequ.c str/ft_strjoin.c \
 		  str/ft_strrev.c str/ft_atoi.c str/ft_itoa.c str/ft_strtonum.c str/ft_wstrlen.c \
 		  str/ft_wstrnlen.c str/ft_strnlen.c str/ft_strarraylen.c str/ft_atoll.c \
+		  str/ft_strarrdup.c \
 		  char/ft_isalpha.c char/ft_isdigit.c char/ft_isalnum.c char/ft_isascii.c \
 		  char/ft_isprint.c char/ft_isupper.c char/ft_islower.c char/ft_isspace.c \
 		  char/ft_isblank.c char/ft_toupper.c char/ft_tolower.c char/ft_wcharlen.c \

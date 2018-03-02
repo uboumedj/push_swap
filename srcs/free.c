@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strarrayfree.c                                  :+:      :+:    :+:   */
+/*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: uboumedj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/25 17:09:50 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/03/02 14:56:52 by uboumedj         ###   ########.fr       */
+/*   Created: 2018/03/02 15:13:53 by uboumedj          #+#    #+#             */
+/*   Updated: 2018/03/02 15:14:26 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/libft.h"
+#include "../inc/ft_push_swap.h"
 
-void	ft_strarrayfree(char **strs)
+void			freedom(t_stack *a, t_stack *b, t_flags *flags, char **args)
 {
-	int i;
-
-	i = 0;
-	while (strs[i])
-	{
-		free(strs[i]);
-		i++;
-	}
-	free(strs);
+	ft_stackfree(&a);
+	ft_stackfree(&b);
+	free(flags);
+	ft_strarrayfree(args);
 }

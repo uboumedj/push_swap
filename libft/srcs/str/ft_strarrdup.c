@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strarrayfree.c                                  :+:      :+:    :+:   */
+/*   ft_strarrdup.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: uboumedj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/25 17:09:50 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/03/02 14:56:52 by uboumedj         ###   ########.fr       */
+/*   Created: 2018/03/02 14:37:32 by uboumedj          #+#    #+#             */
+/*   Updated: 2018/03/02 14:44:09 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 
-void	ft_strarrayfree(char **strs)
+char	**ft_strarrdup(char **str)
 {
-	int i;
+	char	**res;
+	size_t	len;
+	int		i;
 
+	len = 0;
+	while (str[len])
+		len++;
+	if (!(res = (char **)malloc(sizeof(char *) * len + 1)))
+		return (NULL);
 	i = 0;
-	while (strs[i])
+	while (str[i])
 	{
-		free(strs[i]);
+		res[i] = ft_strdup(str[i]);
 		i++;
 	}
-	free(strs);
+	res[i] = NULL;
+	return (res);
 }
