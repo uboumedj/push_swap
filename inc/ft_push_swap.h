@@ -6,7 +6,7 @@
 /*   By: uboumedj <uboumedj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 14:43:43 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/03/02 15:12:56 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/03/02 16:36:19 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,5 +104,7 @@ void				do_operations(char *line, t_stack **a, t_stack **b, t_flags **flags);
 */
 
 void				cmn_error();
+void				inst_error(t_stack **a, t_stack **b, char *line, t_flags **flags);
+void				mult_error(t_stack **a, char **args);
 
 #endif

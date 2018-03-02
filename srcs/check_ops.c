@@ -6,7 +6,7 @@
 /*   By: uboumedj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/16 16:18:41 by uboumedj          #+#    #+#             */
-/*   Updated: 2018/03/01 19:43:28 by uboumedj         ###   ########.fr       */
+/*   Updated: 2018/03/02 16:33:18 by uboumedj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	do_operations(char *line, t_stack **a, t_stack **b, t_flags **flags)
 		else if (ft_strcmp(line, "rrr") == 0)
 			rrr(a, b, flags);
 		else
-			cmn_error();
+			inst_error(a, b, line, flags);
 		ft_strclr(line);
 		free(line);
 	}
