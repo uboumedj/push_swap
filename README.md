@@ -21,11 +21,9 @@ In this case, the second algorithm will push the *smallest* number to the second
 In the case where there are more than 8 numbers, my algorithm will calculate which number requires the *least amount of moves* to be pushed to the second stack while keeping the second stack *reverse-sorted*. That means it will simulate at **every** cycle, pushing **each** number from the first stack to the second, at the right spot to keep it *reverse-sorted*, and decide to push the one that took the **least amount of moves**. When that awful idea is over, it then pushes everything from the second stack back to the first.
 
 Doing so takes an **enormous amount of time**, compared to using usual predetermined algorithms that do the same thing for every case. However, the assignment was asking us to sort the numbers in the least amount of *moves*, not the least amount of *time*, and my program does that quite nicely.
-
-<br><br>
-
+<br>
 During future changes, I plan on implementing every known sorting algorithm, and the user might choose which one he wants to use by specifying it with a flag when launching the program.
 
 ## The checker program
 
-The checker program simply checks if the instructions we feed it on the standard input manage to sort the given numbers. It is very useful when checking if the push_swap program outputs a valid answer; simply by using it like `./push_swap x x x x | ./checker x x x x`
+The checker program simply checks if the instructions we feed it on the standard input manage to sort the given numbers. It is very useful when checking if the push_swap program outputs a valid answer; simply by using it like <br> `./push_swap x x x x | ./checker x x x x`
