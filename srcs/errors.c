@@ -12,6 +12,11 @@
 
 #include "../inc/ft_push_swap.h"
 
+/*
+** Three different error cases with different error outputs and different
+** memory release handling.
+*/
+
 void	cmn_error(void)
 {
 	write(2, "Error\n", 6);

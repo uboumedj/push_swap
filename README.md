@@ -25,3 +25,7 @@ Doing so takes an **enormous amount of time**, compared to using usual predeterm
 <br><br>
 
 During future changes, I plan on implementing every known sorting algorithm, and the user might choose which one he wants to use by specifying it with a flag when launching the program.
+
+## The checker program
+
+The checker program simply checks if the instructions we feed it on the standard input manage to sort the given numbers. It is very useful when checking if the push_swap program outputs a valid answer; simply by using it like `./push_swap x x x x | ./checker x x x x`

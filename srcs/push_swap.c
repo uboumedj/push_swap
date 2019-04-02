@@ -12,6 +12,10 @@
 
 #include "../inc/ft_push_swap.h"
 
+/*
+** main function of the push_swap program.
+*/
+
 int		main(int argc, char **argv)
 {
 	t_stack		*a;

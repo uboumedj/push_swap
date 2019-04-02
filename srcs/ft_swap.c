@@ -12,6 +12,13 @@
 
 #include "../inc/ft_push_swap.h"
 
+/*
+** Swap instructions coding. Performing a swap on a stack means swapping the
+** first two elements of the stack. [sa] swaps the first two elements of
+** stack a, [sb] swaps the first two elements of stack b, and
+** [ss] performs |sa| and |sb| at the same time.
+*/
+
 static void		swap(t_stack **stack)
 {
 	int temp;

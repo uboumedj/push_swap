@@ -12,6 +12,14 @@
 
 #include "../inc/ft_push_swap.h"
 
+/*
+** Rotate instructions coding. Rotating means, if you look at the stack from
+** left to right, left-most element being the one at the top of the stack,
+** you're rotating one notch left, and the first element becomes the
+** last. [ra] rotates the stack a, [rb] rotates the stack b, and [rr] rotates
+** both at the same time.
+*/
+
 static void		rotate(t_stack **stack)
 {
 	t_stack		*temp;

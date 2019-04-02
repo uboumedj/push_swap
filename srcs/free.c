@@ -12,6 +12,11 @@
 
 #include "../inc/ft_push_swap.h"
 
+/*
+** freedom function is called to free all the malloc'ed memory before exiting
+** the program.
+*/
+
 void			freedom(t_stack *a, t_stack *b, t_flags *flags, char **args)
 {
 	ft_stackfree(&a);

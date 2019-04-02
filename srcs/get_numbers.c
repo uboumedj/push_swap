@@ -12,6 +12,12 @@
 
 #include "../inc/ft_push_swap.h"
 
+/*
+** after initializing the stack, get_numbers will put each number to be sorted
+** inside it, all the while checking if there is an invalid number. If so, the
+** program will exit with an error.
+*/
+
 void			get_numbers(t_stack **a, int argc, char **argv)
 {
 	long long int	temp;
@@ -36,6 +42,11 @@ void			get_numbers(t_stack **a, int argc, char **argv)
 	i--;
 	*a = t;
 }
+
+/*
+** init_list initializes the first stack by creating the number of elements
+** necessary to contain each number to be sorted.
+*/
 
 void			init_list(t_stack **a, int argc, char **argv)
 {

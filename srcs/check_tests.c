@@ -12,6 +12,12 @@
 
 #include "../inc/ft_push_swap.h"
 
+/*
+** check_valid_nb checks if the current number is a valid INT value, and if it
+** was not already input by the user. The program exits if those conditions are
+** not met.
+*/
+
 int			check_valid_nb(long long int nb, t_stack *t, t_stack *a)
 {
 	t_stack	*temp;
@@ -27,6 +33,12 @@ int			check_valid_nb(long long int nb, t_stack *t, t_stack *a)
 	}
 	return (1);
 }
+
+/*
+** check_valid_args checks the program's parameters for invalid characters. The
+** program accepts only digits (outside of the flags) so if this function
+** detects any other character, the program will exit.
+*/
 
 int			check_valid_args(int argc, char **argv)
 {
@@ -49,6 +61,12 @@ int			check_valid_args(int argc, char **argv)
 	}
 	return (1);
 }
+
+/*
+** check_sort is a very useful function that checks if the number stack is
+** already sorted. It is part of the basis of the algorithm's loop, checking at
+** each turn if the first stack is sorted.
+*/
 
 int			check_sort(t_stack *a)
 {

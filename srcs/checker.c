@@ -12,6 +12,10 @@
 
 #include "../inc/ft_push_swap.h"
 
+/*
+** main function of the checker program
+*/
+
 int				main(int argc, char **argv)
 {
 	t_stack		*a;

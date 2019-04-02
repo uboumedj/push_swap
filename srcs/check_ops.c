@@ -12,6 +12,12 @@
 
 #include "../inc/ft_push_swap.h"
 
+/*
+** do_operations is the basis of the checker program's code. It will perform
+** each valid operation it finds from standard input. If this function
+** encounters an invalid operation, the program will exit.
+*/
+
 void	do_operations(char *line, t_stack **a, t_stack **b, t_flags **flags)
 {
 	while (get_next_line(0, &line) != 0)

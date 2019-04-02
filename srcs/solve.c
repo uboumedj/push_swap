@@ -12,6 +12,13 @@
 
 #include "../inc/ft_push_swap.h"
 
+/*
+** solve function dispatches the sorting job to the three different algorithms
+** depending on the amount of numbers to sort. If there are 3 or less,
+** [solve_three] will be used. If there are less than 8, [solve_small_len] will
+** be used, and in every other case, [solve_big_len] can do the job pretty well.
+*/
+
 void	solve(t_stack **a, t_stack **b, t_flags **flags)
 {
 	int		len;

@@ -12,6 +12,12 @@
 
 #include "../inc/ft_push_swap.h"
 
+/*
+** solve_three function covers every possible unsorted case consisting of three
+** numbers. It performs exactly the minimal amount of moves possible to sort
+** those numbers in every case.
+*/
+
 static void		three_min_sec(t_stack **a, t_stack **b, t_flags **flags)
 {
 	if ((*a)->content > (*a)->next->next->content)

@@ -12,6 +12,14 @@
 
 #include "../inc/ft_push_swap.h"
 
+/*
+** Reverse rotate instructions coding. Reverse-rotating means, if you look at
+** the stack from left to right, left-most element being the one at the top of
+** the stack, you're rotating one notch right, and the last element becomes the
+** first. [rra] reverse rotates the stack a, [rrb] reverse rotates the stack b,
+** and [rrr] reverse rotates both at the same time.
+*/
+
 static void		revrotate(t_stack **stack)
 {
 	t_stack		*inc;

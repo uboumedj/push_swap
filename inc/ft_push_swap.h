@@ -35,7 +35,7 @@ typedef struct		s_flags
 }					t_flags;
 
 /*
-** ----------------------Pile manipulation functions------------------------
+** ----------------------Stack manipulation functions-----------------------
 */
 
 void				sa(t_stack **a, t_stack **b, t_flags **flags);

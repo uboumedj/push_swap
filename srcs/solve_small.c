@@ -12,6 +12,14 @@
 
 #include "../inc/ft_push_swap.h"
 
+/*
+** solve_small function pushes the smallest number to the second stack at every
+** cycle, until there are only three, which would be the three biggest numbers.
+** It then performs a solve_three on them and pushes everything from the second
+** stack back to the first.
+** It is only called if the amount of numbers to sort doesn't exceed 8.
+*/
+
 static void			min_to_top(t_stack **a, t_stack **b, t_flags **flags)
 {
 	int index;

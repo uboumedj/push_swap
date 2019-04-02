@@ -12,6 +12,12 @@
 
 #include "../inc/ft_push_swap.h"
 
+/*
+** Push instructions coding. Pushing takes the first element from the stack and
+** pushes it to the other: [pa] pushes from stack b to stack a, and
+** [pb] pushes from stack a to stack b.
+*/
+
 static void		push(t_stack **a, t_stack **b)
 {
 	t_stack *temp;

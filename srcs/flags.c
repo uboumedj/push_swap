@@ -12,6 +12,13 @@
 
 #include "../inc/ft_push_swap.h"
 
+/*
+** check_for_flags checks if there are any flags before the numbers. There are
+** currently two possible flags: [-t] for displaying the total moves performed
+** at the end of the program, and [-v] for displaying the state of the stacks
+** between each move.
+*/
+
 int		check_for_flags(char **str, t_flags **flags)
 {
 	if (!(*flags))
@@ -41,6 +48,10 @@ int		check_for_flags(char **str, t_flags **flags)
 	return ((*flags)->v + (*flags)->count);
 }
 
+/*
+** deprecated function, remove in next phase.
+*/
+
 void	do_flags(t_stack *a, t_stack *b, t_flags **flags)
 {
 	if ((*flags)->v)
@@ -48,6 +59,12 @@ void	do_flags(t_stack *a, t_stack *b, t_flags **flags)
 	if ((*flags)->count)
 		(*flags)->nb++;
 }
+
+/*
+** display_stacks is called within each instruction if the [-v] flag was used.
+** It basically displays the state of both stacks after the instruction
+** was performed on them.
+*/
 
 void	display_stacks(t_stack *a, t_stack *b)
 {
@@ -71,6 +88,11 @@ void	display_stacks(t_stack *a, t_stack *b)
 	}
 	ft_printf("\n---------------------------------------------------\n");
 }
+
+/*
+** do_count function is called at the end of the program if the [-t] flag was
+** used. It very simply displays the total moves performed.
+*/
 
 void	do_count(t_flags *flags)
 {
